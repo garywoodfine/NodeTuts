@@ -1,0 +1,14 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "A book API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gary Woodfine",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
