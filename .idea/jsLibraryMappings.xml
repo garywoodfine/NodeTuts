@@ -3,6 +3,5 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{NodeTuts node_modules}" />
     <file url="file://$PROJECT_DIR$/app.js" libraries="{ECMAScript 6, WebGL}" />
-    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
