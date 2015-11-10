@@ -3,7 +3,13 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 
-var db = mongoose.connect('mongodb://localhost/bookAPI');
+var db;
+
+if(process.env.ENV =='Test')
+  db = mongoose.connect('mongodb://localhost/bookAPI_test');
+else{
+    db = mongoose.connect('mongodb://localhost/bookAPI');
+}
 
 var Book = require('./models/BookModel');
 var app = express();
@@ -26,3 +32,5 @@ app.get('/', function(req,res){
 app.listen(port, function(){
     console.log('Gulp API Running on PORT: ' + port);
 });
+
+module.exports = app;
