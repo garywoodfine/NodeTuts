@@ -7,6 +7,7 @@ var db;
 
 if(process.env.ENV =='Test')
   db = mongoose.connect('mongodb://localhost/bookAPI_test');
+
 else{
     db = mongoose.connect('mongodb://localhost/bookAPI');
 }
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 bookRouter = require('./Routes/bookRoutes')(Book);
-//authorRouter = require('./Routes/authorRoutes')(Author);
+
 
 app.use('/api/books', bookRouter);
 //app.use('/api/authors', authorRouter);
